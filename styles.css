@@ -1,32 +1,43 @@
 * {
-    box-sizing: border-box;
     margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
-/*PARENT*/
 .parent {
     border: 10px solid blue;
-    background: dodgerblue;
-    height: 100vh;
+    background-color: dodgerblue;
+    padding: 40px 0;
 }
 
+.child {
+    border: 6px solid red;
+    background-color: orange;
+    color: white;
+    font-family: monospace;
+    font-size: 40px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.child:nth-child(odd) {
+    border-color: darkviolet;
+    background-color: #c92fff;
+}
+
+/*
+Flexible Box Styles
+*/
 .flexContainer {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-
-    flex-direction: column;
+    flex-flow: row wrap;
 }
 
-/*CHILD*/
-.child {
-    border: 6px solid red;
-    background: orange;
-    width: 200px;
-    padding: 30px;
-    font-size: 40px;
-    font-family: sans-serif;
-    color: white;
+.flexItem {
+    order: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    /*flex: 1 1 300px;*/
 }
-
-
