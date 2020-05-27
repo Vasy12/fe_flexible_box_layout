@@ -1,43 +1,32 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
 
-.parent {
-    border: 10px solid blue;
-    background-color: dodgerblue;
-    padding: 40px 0;
-}
+.listItem {
+    border: 2px solid;
+    border-radius: 10px;
+    max-width: 700px;
 
-.child {
-    border: 6px solid red;
-    background-color: orange;
-    color: white;
-    font-family: monospace;
-    font-size: 40px;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.child:nth-child(odd) {
-    border-color: darkviolet;
-    background-color: #c92fff;
-}
-
-/*
-Flexible Box Styles
-*/
-.flexContainer {
     display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
 }
 
-.flexItem {
-    order: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 300px;
-    /*flex: 1 1 300px;*/
+.oneLineText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.listItem > * {
+    flex-grow: 0.5;
+}
+
+.eventName {
+    margin-left: auto;
+
+}
+
+.eventDate {
+    text-align: right;
 }
